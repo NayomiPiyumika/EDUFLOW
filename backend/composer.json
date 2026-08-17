@@ -44,9 +44,7 @@
             "php-http/discovery": true
         },
         "platform-check": false,
-        "audit": {
-            "block": false
-        }
+        "policy.advisories.block": false
     },
     "minimum-stability": "stable",
     "prefer-stable": true
