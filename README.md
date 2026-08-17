@@ -1,3 +1,4 @@
+<img width="1919" height="768" alt="image" src="https://github.com/user-attachments/assets/95612cdb-aec2-4a80-8fa1-ca4071208e0b" />
 # EduFlow — Smart Tuition & Student Management System
 
 A full-stack tuition/class management platform built with **Laravel 11** (API backend) and
