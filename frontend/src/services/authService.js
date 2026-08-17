@@ -1,17 +1,18 @@
-import api from './api';
+import api from './api'; // හෝ ඔයාගේ api/axios file එක ඇති Path එක
 
 export const authService = {
-  async login(email, password) {
-    const { data } = await api.post('/login', { email, password });
-    return data; // { user, token }
+  login: async (email, password) => {
+    const response = await api.post('/login', { email, password });
+    return response.data;
   },
 
-  async logout() {
-    await api.post('/logout');
+  me: async () => {
+    const response = await api.get('/me');
+    return response.data;
   },
 
-  async me() {
-    const { data } = await api.get('/me');
-    return data;
+  logout: async () => {
+    const response = await api.post('/logout');
+    return response.data;
   },
 };
