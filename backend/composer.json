@@ -44,7 +44,16 @@
             "php-http/discovery": true
         },
         "platform-check": false,
-        "policy.advisories.block": false
+        "policy.advisories.block": false,
+        "policy": {
+            "advisories": {
+                "block": false
+            }
+        },
+        "audit": {
+            "block": "none",
+            "abandoned": "ignore"
+        }
     },
     "minimum-stability": "stable",
     "prefer-stable": true
