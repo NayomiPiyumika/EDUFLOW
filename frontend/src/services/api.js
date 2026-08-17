@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = 
-  import.meta.env.VITE_API_BASE_URL || 
-  import.meta.env.VITE_API_URL || 
-  'https://eduflow-production-03e6.up.railway.app/api';
+// Directly set the Railway backend URL
+const API_BASE_URL = 'https://eduflow-production-03e6.up.railway.app/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -22,8 +20,6 @@ api.interceptors.request.use((config) => {
 });
 
 // Centralized response handling:
-// - 401 -> clear session and redirect to login
-// - other errors -> pass through, but normalize the message
 api.interceptors.response.use(
   (response) => response,
   (error) => {
